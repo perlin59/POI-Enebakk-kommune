@@ -1,0 +1,8 @@
+{"name":"Renovasjon","type":"FeatureCollection"
+,"features":[
+{"type":"Feature","geometry":{"type":"Point","coordinates":[11.1375228235868,59.8343062161144]},"properties":{"URL":"","Navn":"Flateby Mat","Bilder":"","Type":"Returpunkter","Gruppe":"Renovasjon"}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[11.1528628881211,59.8292234946391]},"properties":{"URL":"http://www.facebook.com/pages/Flatebysenteret/165816926806967","Navn":"Flatebysenteret","Bilder":"","Type":"Returpunkter","Gruppe":"Renovasjon"}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[11.1454458437804,59.7635557045358]},"properties":{"URL":"","Navn":"Kirkebygda","Bilder":"","Type":"Returpunkter","Gruppe":"Renovasjon"}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[11.0527327323484,59.7233849958149]},"properties":{"URL":"","Navn":"Vågsenteret","Bilder":"","Type":"Returpunkter","Gruppe":"Renovasjon"}}
+,{"type":"Feature","geometry":{"type":"Point","coordinates":[10.9840802480728,59.7717048939445]},"properties":{"URL":"","Navn":"Gran","Bilder":"","Type":"Returpunkter","Gruppe":"Renovasjon"}}
+]}
