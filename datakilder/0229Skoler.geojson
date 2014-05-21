@@ -1,7 +1,7 @@
 var skolerGeoJSON = 
 {"name":"Skoler","type":"FeatureCollection"
 ,"features":[
-{"type":"Feature","geometry":{"type":"Point","coordinates":[11.1485501941858,59.7650320436063]},"properties":{"URL":"http://www.enebakk.ungdomsskole.no/","Navn":"Enebakk ungdomsskole","Bilder":"","Type":"Ungdomsskoler","Gruppe":"Skoler"}}
+{"type":"Feature","geometry":{"type":"Point","coordinates":[11.1485501941858,59.7650320436063]},"properties":{"URL":"<a href='http://www.enebakk.ungdomsskole.no/'>Enebakk ungdomsskole</a>","Navn":"Enebakk ungdomsskole","Bilder":"","Type":"Ungdomsskoler","Gruppe":"Skoler"}}
 ,{"type":"Feature","geometry":{"type":"Point","coordinates":[11.0610378187247,59.725105296317]},"properties":{"URL":"http://mjaer.ungdomsskole.no/","Navn":"Mjær ungdomsskole","Bilder":"http://195.1.20.76/links/0229/POI_bilder/mjaerungdomsskole1.jpg","Type":"Ungdomsskoler","Gruppe":"Skoler"}}
 ,{"type":"Feature","geometry":{"type":"Point","coordinates":[11.0566816226658,59.7213650222212]},"properties":{"URL":"http://www.ytreenebakk.skole.no/","Navn":"Ytre Enebakk skole","Bilder":"http://195.1.20.76/links/0229/POI_bilder/ytreenebakkskole1.jpg","Type":"Barneskoler","Gruppe":"Skoler"}}
 ,{"type":"Feature","geometry":{"type":"Point","coordinates":[11.1490458716484,59.7663713432105]},"properties":{"URL":"http://www.kirkebygden.skole.no/","Navn":"Kirkebygden skole","Bilder":"http://195.1.20.76/links/0229/POI_bilder/kirkeb_skole.JPG","Type":"Barneskoler","Gruppe":"Skoler"}}

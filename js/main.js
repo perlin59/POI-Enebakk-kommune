@@ -27,7 +27,7 @@ $(document).ready(function() {
     var marker = L.marker([59.7645755, 11.1449271]);
 
     //legg markøren til som eget lag i "layer control"
-    map.LayerControl.addOverlay(marker, 'marker');
+    map.LayerControl.addOverlay(marker, 'Enebakk Rådhus');
 
     //Knytt en popup til markøren ved klikk. ..
     marker.bindPopup("<a href='http://enebakk.kommune.no/'>Velkommen til Enebakk Kommune</a>");
@@ -86,16 +86,16 @@ $(document).ready(function() {
         layer.bindPopup(string);
     };
 
-    /**
-    Bedre måte å hente inn data på. Henter inn asynkront. Pass på context! (fungerer ikke for localhost)
-    $.getJSON("pubs_restaurant_norway.geojson", function(data) {
+    /*
+    //Bedre måte å hente inn data på. Henter inn asynkront. Pass på context! (fungerer ikke for localhost)
+    $.getJSON("file:///C:/Users/paaped/Documents/GitHub/POI-Enebakk-kommune/datakilder/0229Barnehager.geojson", function(data) {
         //Start "geoJson"-motoren til Leaflet. Den tar inn et JSON-objekt i en variabel. Denne har vi definert i JSON-filen i index.html
         var dataLayer = L.geoJson(data, {
             onEachFeature: visPopup//vi refererer til funksjonen vi skal kalle. Husk at funksjonen også er et objekt
         }).addTo(map);
 
         //legg til punktene til "layer control"
-        map.LayerControl.addOverlay(dataLayer, "Datalag (geojson)");
+        map.LayerControl.addOverlay(dataLayer, "Barnehager");
     });    
     */
     
@@ -114,7 +114,7 @@ $(document).ready(function() {
     
     //Her ønsker jeg å lese mine egne json filer, men vet ikke hvordan jeg skal lage en gyldig variabel av json filen.
 
-    var dataLayer = L.geoJson(skolerGeoJSON, {
+    var skoler = L.geoJson(skolerGeoJSON, {
         onEachFeature: visPopup, //vi refererer til funksjonen vi skal kalle. Husk at funksjonen også er et objekt
         pointToLayer: function(feature, latlng) {
             return L.circleMarker(latlng, geojsonMarkerOptions);
@@ -122,7 +122,7 @@ $(document).ready(function() {
     });
 
     //legg til punktene til "layer control"
-    map.LayerControl.addOverlay(dataLayer, "Datalag (geojson)");
+    map.LayerControl.addOverlay(skoler, "Skoler");
   
     //Legg inn minimap i hjørnet
     var WA_vector = new L.TileLayer.WA();
