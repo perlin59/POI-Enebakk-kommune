@@ -6,36 +6,36 @@ $(document).ready(function() {
     map = new WebatlasMap('map', {customer: 'WA_JS_V3_Coursework'});
 
     //endrer senterpunkt til koordinatene og setter zoomnivå til 5
-    map.setView(new L.LatLng(64.0107043, 11.4901134), 5);
+    map.setView(new L.LatLng(59.7645755, 11.1449271), 5);
 
     //definerer flere WMS'er og legger de til i "layer-control"
-    var wmsbaerum = new L.TileLayer.WMS("http://195.1.20.83/wms-follo/?", {
-        layers: 'RPL',
+    var wmsrpl = new L.TileLayer.WMS("http://195.1.20.83/wms-follo/?", {
+        layers: '0229_RP3VN2',
         format: 'image/png'
     });
     //legger til WMS'en i layer-control
-    map.LayerControl.addOverlay(wmsbaerum, 'Follo RPL');
+    map.LayerControl.addOverlay(wmsrpl, 'Follo RPL');
 
-    var wmsalta = new L.TileLayer.WMS("http://195.1.20.83/wms-follo/?", {
-        layers: 'EIENDOMSKART',
+    var wmseiendom = new L.TileLayer.WMS("http://195.1.20.83/wms-follo/?", {
+        layers: 'EIENDOMSKART_STREK',
         format: 'image/png'
     });
-    map.LayerControl.addOverlay(wmsalta, 'Follo Eiendom');
+    map.LayerControl.addOverlay(wmseiendom, 'Follo Eiendom');
 
 
     //lag en ny markør og legg til kartet
-    var marker = L.marker([64.0107043, 11.4901134]);
+    var marker = L.marker([59.7645755, 11.1449271]);
 
     //legg markøren til som eget lag i "layer control"
     map.LayerControl.addOverlay(marker, 'marker');
 
     //Knytt en popup til markøren ved klikk. ..
-    marker.bindPopup("Her kan det være <b>HTML</b>");
+    marker.bindPopup("<a href='http://enebakk.kommune.no/'>Velkommen til Enebakk Kommune</a>");
 
     
     /*
     //Lag en ny sirkel med radius og legg til kartet - merk at radius _ikke_ er geografisk
-    var circle500 = L.circle([64.0107043, 11.4901134], 500, {
+    var circle500 = L.circle([59.7645755, 11.1449271], 500, {
         color: 'green',
         fillColor: '#00FF00',
         fillOpacity: 0.5
@@ -55,7 +55,7 @@ $(document).ready(function() {
     
 
     //Lag en sirkelmarkør (forenklet sirkel) og legg til kartet
-    var circleMarker = L.circleMarker([64.0107043, 11.4901134], {
+    var circleMarker = L.circleMarker([59.7645755, 11.1449271], {
         color: 'red',
         fillColor: '#FF0000',
         fillOpacity: 0.5
