@@ -66,10 +66,10 @@ $(document).ready(function() {
 
     //Knytt en popup med en video til sirkelmarkøren
     circleMarker.bindPopup('<iframe width="200" height="200" src="http://www.youtube.com/embed/2JkwzHw6MxA" frameborder="0" allowfullscreen></iframe>');
-
+*/
     //definerer en liste vi skal samle punktene våre i
     var pointList = [];
-    */
+    
     //definer en funksjon som vi skal kalle for hver feature som leses i L.geoJson()
     function visPopup(feature, layer) {
         //legg til et punkt i punktlisten. Punktet er en liste med "lat, lng"
@@ -127,7 +127,7 @@ $(document).ready(function() {
     //Legg inn minimap i hjørnet
     var WA_vector = new L.TileLayer.WA();
     var miniMap = new L.Control.MiniMap(WA_vector, {toggleDisplay: true, autoToggleDisplay: true}).addTo(map);
-
+/*
     //start opp heatmap-motoren - vi bruker punktlisten vi lagde ovenfor og setter parametere
     var heatmapLayer = L.heatLayer(pointList, {
         radius: 80
@@ -156,5 +156,5 @@ $(document).ready(function() {
     markers.addLayer(dataLayer).addTo(map);
     //legg også til som eget lag i layer control
     map.LayerControl.addOverlay(markers, "Datalag (cluster)");    
-
+*/
 });

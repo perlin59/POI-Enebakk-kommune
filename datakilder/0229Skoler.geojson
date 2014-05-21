@@ -1,4 +1,4 @@
-var skolerGeoJSON = {
+var skolerGeoJSON = 
 {"name":"Skoler","type":"FeatureCollection"
 ,"features":[
 {"type":"Feature","geometry":{"type":"Point","coordinates":[11.1485501941858,59.7650320436063]},"properties":{"URL":"http://www.enebakk.ungdomsskole.no/","Navn":"Enebakk ungdomsskole","Bilder":"","Type":"Ungdomsskoler","Gruppe":"Skoler"}}
@@ -9,4 +9,4 @@ var skolerGeoJSON = {
 ,{"type":"Feature","geometry":{"type":"Point","coordinates":[11.1499716267872,59.7616582478364]},"properties":{"URL":"http://www.enebakk.kommune.no/modules/theme.aspx?ObjectType=Article&ElementID=684&Category.ID=839","Navn":"Enebakk kulturskole","Bilder":"","Type":"Andre skoler","Gruppe":"Skoler"}}
 ,{"type":"Feature","geometry":{"type":"Point","coordinates":[11.0145495008966,59.7367312979629]},"properties":{"URL":"http://www.vikgaard.no/index.php?page=home","Navn":"Vik musikkskole","Bilder":"","Type":"Andre skoler","Gruppe":"Skoler"}}
 ,{"type":"Feature","geometry":{"type":"Point","coordinates":[11.1342399470538,59.8326438275574]},"properties":{"URL":"http://www.hauglia.skole.no/","Navn":"Hauglia skole","Bilder":"","Type":"Barneskoler","Gruppe":"Skoler"}}
-]}}
+]}
