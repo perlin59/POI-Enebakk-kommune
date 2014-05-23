@@ -6,7 +6,7 @@ $(document).ready(function() {
     map = new WebatlasMap('map', {customer: 'WA_JS_V3_Coursework'});
 
     //endrer senterpunkt til koordinatene og setter zoomnivå til 5
-    map.setView(new L.LatLng(59.7645755, 11.1449271), 5);
+    map.setView(new L.LatLng(59.7645755, 11.1449271), 10);
 
     //definerer flere WMS'er og legger de til i "layer-control"
     var wmsrpl = new L.TileLayer.WMS("http://195.1.20.83/wms-follo/?", {
@@ -100,15 +100,31 @@ $(document).ready(function() {
     */
     
     //Sett opp stil til de nye sirkelmarkørene
-    var geojsonMarkerOptions = {
-        radius: 8,
-        fillColor: "#ff7800",
+    var SkoleMarker = {
+        radius: 7,
+        fillColor: "#00ff00",
         color: "#000",
         weight: 1,
         opacity: 1,
         fillOpacity: 0.8
     };
-    
+	
+    var BarneskoleMarker = {
+        radius: 7,
+        fillColor: "#ff0000",
+        color: "#000",
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    };
+	var TuristMarker = {
+        radius: 7,
+        fillColor: "#0000ff",
+        color: "#000",
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    };
     /*Alternativ metode for localhost og synkron lasting*/
     //Start "geoJson"-motoren til Leaflet. Den tar inn et JSON-objekt i en variabel. Denne har vi definert i JSON-filen i index.html
     
@@ -117,13 +133,29 @@ $(document).ready(function() {
     var skoler = L.geoJson(skolerGeoJSON, {
         onEachFeature: visPopup, //vi refererer til funksjonen vi skal kalle. Husk at funksjonen også er et objekt
         pointToLayer: function(feature, latlng) {
-            return L.circleMarker(latlng, geojsonMarkerOptions);
+            return L.circleMarker(latlng, SkoleMarker);
         }
     });
 
     //legg til punktene til "layer control"
     map.LayerControl.addOverlay(skoler, "Skoler");
+	
+    var barneskoler = L.geoJson(barneskolerGeoJSON, {
+        onEachFeature: visPopup, //vi refererer til funksjonen vi skal kalle. Husk at funksjonen også er et objekt
+        pointToLayer: function(feature, latlng) {
+            return L.circleMarker(latlng, BarneskoleMarker);
+        }
+    });
+    map.LayerControl.addOverlay(barneskoler, "Barneskoler");
   
+    var turisme = L.geoJson(fritidturismeGeoJSON, {
+        onEachFeature: visPopup, //vi refererer til funksjonen vi skal kalle. Husk at funksjonen også er et objekt
+        pointToLayer: function(feature, latlng) {
+            return L.circleMarker(latlng, TuristMarker);
+        }
+    });
+    map.LayerControl.addOverlay(turisme, "Fritid&Turisme");
+
     //Legg inn minimap i hjørnet
     var WA_vector = new L.TileLayer.WA();
     var miniMap = new L.Control.MiniMap(WA_vector, {toggleDisplay: true, autoToggleDisplay: true}).addTo(map);
